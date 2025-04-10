@@ -95,3 +95,19 @@ anylogic-baseline/
 ├── Gig_carrier.java        # Gig carrier agent
 ├── CustOrder.java          # Order agent
 ├── README.md               # This file
+
+
+# ML-Integrated AnyLogic Simulation: Warehouse Selection & Order Fulfillment
+
+## Python Code Setup:
+
+- Your models are already trained and saved in the paths:
+```
+model/mean_reg_models/FEDEX+Ground_mean_reg_XGBoost_v3
+model/mean_reg_models/UPS+Ground_mean_reg_XGBoost_v2
+```
+- The test data is saved in:
+```
+cleaned_merged_data_no_mismatch/{carrier}_test_df.parquet
+```
+- The FEATURE_COLS and SELECTED_CARRIERS are correctly defined in helper/utils.py.
