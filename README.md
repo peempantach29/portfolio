@@ -95,12 +95,14 @@ anylogic-baseline/
 ├── Gig_carrier.java        # Gig carrier agent
 ├── CustOrder.java          # Order agent
 ├── README.md               # This file
-
+```
 ---
 
 # ML-Integrated AnyLogic Simulation: Warehouse Selection & Order Fulfillment
 
-## Python Code Setup:
+This script packages trained ML models and recent test data for integration with an **AnyLogic simulation** via Python Communicator.
+
+## Python Code Setup and Assumptions:
 
 - Your models are already trained and saved in the paths:
 ```
@@ -112,3 +114,35 @@ model/mean_reg_models/UPS+Ground_mean_reg_XGBoost_v2
 cleaned_merged_data_no_mismatch/{carrier}_test_df.parquet
 ```
 - The FEATURE_COLS and SELECTED_CARRIERS are correctly defined in helper/utils.py.
+
+
+---
+
+## Overview
+
+- Loads trained **XGBoost models** for selected carriers.
+- Loads recent **test data** from your cleaned dataset.
+- Encodes and packages the model, model structure, and data subset.
+- Saves everything into a single `.pkl` payload file that AnyLogic can consume.
+
+---
+
+
+---
+
+## How to Run
+
+Make sure your environment includes:
+
+- `pandas`
+- `joblib`
+- `xgboost`
+- `sklearn`
+
+Then run:
+
+```bash
+python generate_anylogic_payload.py
+
+
+
