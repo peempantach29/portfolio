@@ -23,7 +23,7 @@ This simulation models a last-mile logistics network where **customer orders** a
 
 ---
 
-## rocess Flow
+## Process Flow
 
 1. **Order Placement**  
    - Each customer places orders at a stochastic rate (e.g., 10 per week, exponentially distributed).
@@ -96,6 +96,7 @@ anylogic-baseline/
 ├── CustOrder.java          # Order agent
 ├── README.md               # This file
 
+---
 
 # ML-Integrated AnyLogic Simulation: Warehouse Selection & Order Fulfillment
 
